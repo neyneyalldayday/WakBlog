@@ -40,3 +40,13 @@ body{
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.title{
+    text-align: center;
+}
+
+.footer{
+    bottom: 0;
+    
+    
+}
