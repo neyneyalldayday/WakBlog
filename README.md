@@ -34,3 +34,6 @@ Make sure you have a modern web browser installed, such as Google Chrome or Mozi
 
    ```bash
    git clone https://github.com/your-username/simple-blog-website.git
+
+### Deployed At
+[here](https://neyneyalldayday.github.io/WakBlog/)
