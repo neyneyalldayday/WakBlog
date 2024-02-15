@@ -6,9 +6,9 @@ const blogData = JSON.parse(localStorage.getItem("blogObject")) || []
 blogData.forEach((blog) => {
     blogCard += `
     <div class="blog-card">
-        <h2 class="render-title">${blog.blogTitle}</h2>
+        <h2 class="render-title">Title: ${blog.blogTitle}</h2>
         <p class="render-content">${blog.blogContent}</p>
-        <h2 class="render-user">${blog.userName}</h2>
+        <h2 class="render-user">User: ${blog.userName}</h2>
     </div>
     `;
 
