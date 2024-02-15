@@ -2,6 +2,13 @@ const blogForm = document.querySelector("#blog-form");
 const submitButton = document.querySelector("#submit-button")
 const themeToggleButton = document.querySelector("#theme-toggle");
 
+document.addEventListener('DOMContentLoaded', function(event) {
+  event.preventDefault()
+  const errorModal = document.querySelector('.error-modal');
+  errorModal.innerHTML = '';
+  errorModal.style.display = 'none';
+});
+
 blogForm.addEventListener("submit", (event) =>{
   event.preventDefault()
   const blogTitle = document.querySelector("#blog-title").value.trim()
@@ -19,13 +26,13 @@ blogForm.addEventListener("submit", (event) =>{
        </div>     
      `;
      errorModal.innerHTML = modalCard;
-
+     errorModal.style.display = 'block'; 
      const errBtn = document.querySelector("#error-reload")
      errBtn.addEventListener("click", (event) => {
       event.preventDefault()
-      document.location.reload()
+      document.location.reload()     
      });
-     
+
   } else {
     const blogObject = JSON.parse(localStorage.getItem("blogObject")) || [];
 
@@ -42,6 +49,15 @@ blogForm.addEventListener("submit", (event) =>{
   }
 
 });
+
+
+document.addEventListener('click', function(event) {
+  if (event.target.id === 'error-reload') {
+      const errorModal = document.querySelector('.error-modal');
+      errorModal.innerHTML = '';
+      errorModal.style.display = 'none'; // Hide the modal container
+  }
+}, false);
 
 
 themeToggleButton.addEventListener('click', function(event) {

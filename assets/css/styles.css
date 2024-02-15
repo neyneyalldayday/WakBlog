@@ -2,6 +2,7 @@
     --background-color: white;
     --text-color: black;
     --form-color: #c77dff;
+    --error-color: #7b2cbf;
     --box-shadow: 6px 3px 3px rgba(0,0,0,0.6)
     /* Add more variables as needed */
 }
@@ -11,6 +12,7 @@
     --background-color: #10002b;
     --text-color: #ddd;
     --form-color: #3c096c;
+    --error-color: #240046;
     --box-shadow: 6px 3px 3px rgba(255,255,255,0.6)
     /* Override other variables as needed */
 }
@@ -45,6 +47,18 @@ body{
 .blog-container{
     padding: 10rem 3rem 10rem 3rem;
     background-color: var(--form-color);
+    position: relative;
+}
+
+.error-modal{
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    background-color: var(--error-color);
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+    
 }
 
 #blog-form{
