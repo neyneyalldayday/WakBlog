@@ -61,6 +61,20 @@ body{
     
 }
 
+.alert-card button{
+    border-radius: 50px;
+    border: none;
+    color:var(--text-color);
+    background-color: var(--background-color);
+}
+
+
+.alert-card button:hover{
+    cursor: pointer;
+    font-size: 1em;
+    box-shadow: var(--box-shadow);
+}
+
 #blog-form{
     display: flex;
     flex-direction: column;
@@ -85,7 +99,7 @@ body{
     border-radius: 50px;
     border: none;
     color:var(--text-color);
-    background-color: var(--background-color)
+    background-color: var(--background-color);
 }
 
 #theme-toggle:hover{
@@ -100,6 +114,19 @@ body{
 .input-wrap{
     display: flex;
     flex-direction: column;
+}
+
+#submit-btn{
+    border-radius: 50px;
+    border: none;
+    color:var(--text-color);
+    background-color: var(--background-color);
+    box-shadow: var(--box-shadow);
+}
+
+#submit-btn:hover{   
+    cursor: pointer;
+    font-size: 1em;
 }
 
 .footer{
