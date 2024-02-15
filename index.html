@@ -3,6 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <link rel="icon" type="image/x-icon" href="/path/to/your/favicon.ico">
         <link rel="stylesheet" href="./assets/css/styles.css">
@@ -13,17 +16,24 @@
         <section class="blog-container">
             <form id="blog-form">
                 <div class="form-input">
-                    <label for="blog-title">Write your title</label>
-                    <input type="text" id="blog-title">
-                    <label for="blog-content">Write your blog</label>
-                    <textarea type="text" id="blog-content"></textarea>
-                    <label for="username">Write your username</label>
-                    <input type="text" id="username">
+                    <div class="input-wrap">
+                        <label for="blog-title">Write your title</label>
+                        <input type="text" id="blog-title">
+                    </div>
+                    <div class="input-wrap">
+                        <label for="blog-content">Write your blog</label>
+                        <textarea type="text" id="blog-content"></textarea>
+                    </div>
+                    <div class="input-wrap">
+                        <label for="username">Write your username</label>
+                        <input type="text" id="username">
+                    </div>
                 </div>
                 <div>
                     <button type="submit" id="submit-btn">submit Blog</button>
                 </div>
             </form>
+            <section class="error-modal"></section>
         </section>
         <footer class="footer">
             <div class="social-icons">
@@ -39,6 +49,9 @@
                 <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
+                <div class="theme-btn-container">
+                    <button id="theme-toggle">Toggle Theme</button>
+                </div>
             </div>
         </footer>
         <script src="./assets/js/logic.js"></script>

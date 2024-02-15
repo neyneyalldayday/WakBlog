@@ -1,7 +1,28 @@
+:root {
+    --background-color: white;
+    --text-color: black;
+    --form-color: #c77dff;
+    --box-shadow: 6px 3px 3px rgba(0,0,0,0.6)
+    /* Add more variables as needed */
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+    --background-color: #10002b;
+    --text-color: #ddd;
+    --form-color: #3c096c;
+    --box-shadow: 6px 3px 3px rgba(255,255,255,0.6)
+    /* Override other variables as needed */
+}
+
 body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: "Protest Strike", sans-serif;
+    font-style: normal;
 }
 
 .social-icons {
@@ -11,7 +32,7 @@ body{
 }
 
 .social-icons a {
-    color: #333;
+    color: var(--text-color);
     margin:  0  0.5rem;
     font-size:  1.5rem;
     transition: color  0.3s ease;
@@ -23,7 +44,7 @@ body{
 
 .blog-container{
     padding: 10rem 3rem 10rem 3rem;
-    background-color: #333;
+    background-color: var(--form-color);
 }
 
 #blog-form{
@@ -43,6 +64,28 @@ body{
 
 .title{
     text-align: center;
+}
+
+#theme-toggle{
+    width: 100%;
+    border-radius: 50px;
+    border: none;
+    color:var(--text-color);
+    background-color: var(--background-color)
+}
+
+#theme-toggle:hover{
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+}
+
+.theme-btn-container{
+    border-radius: 50px;
+}
+
+.input-wrap{
+    display: flex;
+    flex-direction: column;
 }
 
 .footer{
